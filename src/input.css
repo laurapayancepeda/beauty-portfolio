@@ -6,8 +6,10 @@
   }
 
   .smooth-edges {
-    -webkit-backface-visibility: hidden;
-  }
+  -webkit-backface-visibility: hidden;
+  animation: none !important;
+  transform: none !important;
+}
 
   .animate-wave {
     animation-name: wave;
