@@ -11,6 +11,20 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
   <link rel="stylesheet" href="output.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          'nothingyoucoulddo': ['Nothing You Could Do', 'cursive'],
+          'signika': ['Signika', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
   <!-- Alpine.js -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <!-- Start - Fonts -->
@@ -83,7 +97,7 @@
       <div class="col-span-2 md:col-span-1">
         <div
           class="bg-white dark:bg-neutral-900 p-5 pb-28 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800 hover:rotate-0 transition duration-500 -rotate-6 relative">
-          <img src="./assets/Avatar.jpeg" alt=""
+          <img src="./assets/Avatar.png" alt=""
             class="smooth-edges flex flex-col w-full aspect-square object-cover h-auto" />
           <div class="absolute bottom-0 left-0 right-0 text-center">
             <p class="text-gray-800 dark:text-slate-200 pb-7 h-full text-6xl font-nothingyoucoulddo">me</p>
