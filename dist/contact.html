@@ -5,120 +5,138 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Laura Payan Cepeda - Contact</title>
   <meta name="description"
-    content="Hello there, I'm Laura Payan Cepeda – Nail Technician & Nail Artist ✨ I love creating delicate, elegant sets with a touch of sparkle and glam. Currently training to become a Lash Technician 🎀">
-  <!-- Favicon -->
+    content="Get in touch with Laura, Nail Technician and Nail Artist in Abu Dhabi.">
+
   <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-  <link rel="stylesheet" href="output.css" />S
-  <!-- Alpine.js -->
+  <link rel="stylesheet" href="output.css" />
+
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <!-- Start - Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
-  <!-- End - Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap"
+    rel="stylesheet" />
 </head>
 
-<body
-  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+<body class="dark:bg-black bg-white min-h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+
   <!-- Navbar -->
   <header class="flex w-full overflow-hidden pt-10 pb-1">
     <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
-      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+      <div class="container mx-auto flex flex-wrap items-center md:flex-nowrap">
+
         <div class="mr-4 md:mr-8">
-          <a href="../index.html" class="text-2xl font-signika font-bold">LAURA PAYAN CEPEDA</a>
+          <a href="../index.html" class="text-2xl font-signika font-bold">
+            LAURA PAYAN CEPEDA
+          </a>
         </div>
-        <div class="ml-auto md:hidden flex items-center justify-start">
-          <button onclick="menuToggle()" @click="open = !open"
-            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
-            @click="open = !open">
-            <span class="sr-only">Open main menu</span>
+
+        <!-- Mobile menu button -->
+        <div class="ml-auto md:hidden flex items-center">
+          <button type="button"
+            @click="open = !open; menuToggle()"
+            :aria-expanded="open.toString()"
+            aria-controls="menu"
+            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none">
+            <span class="sr-only">Toggle main menu</span>
+
             <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <span aria-hidden="true"
                 class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
-                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                :class="{ 'rotate-45': open, '-translate-y-1.5': !open }"></span>
               <span aria-hidden="true"
-                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
-                :class="{'opacity-0': open } "></span>
+                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                :class="{ 'opacity-0': open }"></span>
               <span aria-hidden="true"
-                class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
-                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                :class="{ '-rotate-45': open, 'translate-y-1.5': !open }"></span>
             </div>
           </button>
         </div>
+
+        <!-- Navigation links -->
         <div id="menu"
           class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center">
+
           <ul id="ulMenu"
             class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
+
             <li class="group transition duration-300">
-              <a href="../index.html" class="font-signika text-2xl">PORTFOLIO
-                <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              <a href="../index.html" class="font-signika text-2xl">
+                PORTFOLIO
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
+
             <li class="group transition duration-300">
-              <a href="about_me.html" class="font-signika text-2xl">ABOUT ME
-                <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              <a href="about_me.html" class="font-signika text-2xl">
+                ABOUT ME
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
+
             <li class="group transition duration-300">
-              <a href="contact.html" class="font-signika text-2xl">CONTACT
+              <a href="contact.html" class="font-signika text-2xl" aria-current="page">
+                CONTACT
                 <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
+
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <!-- Content -->
-  <div class="container mx-auto">
-    <div class="grid grid-cols-2 gap-16">
-      <section class="col-span-2 md:col-span-1">
-        <div class="max-w-screen-md">
-          <h1 class="text-4xl pt-10 pb-8"><b>CONTACT</b></h1>
 
-          <form class="space-y-8" action="mailto:laurapayann@gmail.com">
-            <div>
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
-                email</label>
-              <input type="email" id="email"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="example@gmail.com" required />
-            </div>
-            <div>
-              <label for="subject"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-              <input type="text" id="subject"
-                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="Let me know how I can help you" required />
-            </div>
-            <div class="sm:col-span-2">
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
-                message</label>
-              <textarea id="message" rows="6"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Leave a comment..." required></textarea>
-            </div>
-            <button type="submit"
-              class="py-3 px-5 text-sm font-medium text-center bg-black dark:bg-white text-white dark:text-black rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-              Send message
-            </button>
-          </form>
+  <!-- Main content -->
+  <main class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+
+      <!-- Contact section -->
+      <section class="pt-10">
+        <h1 class="text-4xl pb-8">
+          <b>LET'S CONNECT</b>
+        </h1>
+
+        <div class="space-y-6 max-w-screen-md">
+          <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+            Looking to book an appointment or have a question?
+            I'd love to hear from you!
+          </p>
+
+          <p class="text-base leading-relaxed text-gray-600 dark:text-gray-400">
+            Whether you're dreaming of a delicate, elegant set or something
+            with a little extra sparkle, feel free to get in touch.
+            Let's create something beautiful together.
+          </p>
+
+          <div class="pt-3">
+            <a
+              href="mailto:YOUR_EMAIL@example.com?subject=Nail%20Appointment%20Enquiry"
+              class="inline-block py-3 px-6 text-sm font-medium text-center bg-black dark:bg-white text-white dark:text-black rounded-lg hover:opacity-80 transition duration-300 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-700">
+              Get in touch ✉
+            </a>
+          </div>
         </div>
       </section>
-      <div class="col-span-2 md:col-span-1 flex relative">
-        <div
-          class="bg-white dark:bg-neutral-900 p-5 pb-20 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800  hover:rotate-0 transition duration-500 rotate-6 relative">
+
+      <!-- Image -->
+      <div class="flex relative justify-center md:justify-end">
+        <div class="bg-white dark:bg-neutral-900 p-5 pb-20 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800 hover:rotate-0 transition duration-500 rotate-6 relative">
           <img
             src="https://images.unsplash.com/reserve/yZfr4jmxQyuaE132MWZm_stagnes.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2052&q=80"
-            alt="" class="flex flex-col aspect-square w-full object-cover h-auto max-h-full" />
+            alt="Nail art inspiration"
+            loading="lazy"
+            class="block aspect-square w-full object-cover h-auto max-h-full" />
         </div>
       </div>
+
     </div>
-  </div>
+  </main>
+
   <!-- Footer -->
   <footer>
     <div class="max-w-screen-xl py-16 mx-auto">
@@ -130,13 +148,16 @@
           </p>
         </div>
       </div>
+
       <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
         © 2026 Developed and Designed by Laura Payan Cepeda
       </p>
     </div>
   </footer>
+
+  <!-- Scripts -->
   <script src="fade_in.js"></script>
   <script src="menu.js"></script>
-</body>
 
+</body>
 </html>
